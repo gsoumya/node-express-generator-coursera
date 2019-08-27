@@ -17,7 +17,7 @@ const url = 'mongodb://localhost:27017/conFusion';
 const connect = mongoose.connect(url);
 
 connect.then(db=> {
-  console.log('connected succfully to db')
+  console.log('connected succfully to db !!')
 },error=> {
   console.log('error')
 })
@@ -27,6 +27,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+
 
 app.use(logger('dev'));
 app.use(express.json());
